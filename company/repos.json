@@ -1,0 +1,70 @@
+{
+  "generatedFrom": "bala-voice ROADMAP.md public-engagement surface",
+  "note": "Repositories bala-voice serves as the front door for. All public engagement flows here first.",
+  "entity": "balamonis-llc",
+  "repositories": [
+    {
+      "repo": "bsgusa/bala-voice",
+      "localPath": "~/bala-voice",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Front door — issues, discussions, roadmap mirror, response-time promise"
+    },
+    {
+      "repo": "bsgusa/bala-nexus",
+      "localPath": "~/bala-nexus",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Hub — world map linked from every engagement surface"
+    },
+    {
+      "repo": "bsgusa/bala-pulse",
+      "localPath": "~/bala-pulse",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Trending intelligence — signal suggestions arrive as issues here"
+    },
+    {
+      "repo": "bsgusa/bala-archives",
+      "localPath": "~/bala-archives",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Identity — corrections/additions to the archive arrive as issues"
+    },
+    {
+      "repo": "bsgusa/bala-weave",
+      "localPath": "~/bala-weave",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Collab — PR templates and good-first-issues surfaced here"
+    },
+    {
+      "repo": "bsgusa/command-center-bala",
+      "localPath": "~/Command_Center_Bala_Repo",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Nerve center — ops issues routed here"
+    },
+    {
+      "repo": "bsgusa/balamonis_group_main",
+      "localPath": "~/Balamonis_Group_Main_Repo",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Shared core — platform issues routed here"
+    },
+    {
+      "repo": "bsgusa/balamonis-media",
+      "localPath": "~/Balamonis_Media_Repo",
+      "branch": "main",
+      "entity": "balamonis-llc",
+      "role": "Media studio — studio issues routed here"
+    },
+    {
+      "repo": "bsgusa/AI-Job-Automation",
+      "localPath": "~/AI-Job-Automation",
+      "branch": "main",
+      "entity": "lexora-ai-llc",
+      "role": "Lexora product — product issues routed here"
+    }
+  ]
+}

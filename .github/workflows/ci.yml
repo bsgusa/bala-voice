@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify core files exist
+        run: |
+          test -f README.md && echo "README.md present" || exit 1
+          test -f ROADMAP.md && echo "ROADMAP.md present" || exit 1
+          test -f backlog/priorities.md && echo "backlog/priorities.md present" || exit 1
+          test -f docs/RESPONSE_PROMISE.md || (echo "Response-time promise missing" && exit 1)
+
+      - name: Verify response-time promise present
+        run: |
+          grep -q '7 days' docs/RESPONSE_PROMISE.md && echo "Response-time promise present" || exit 1
+
+      - name: Check for forbidden fabricated claims
+        run: |
+          if grep -riE 'SOC 2|ISO 27001|HIPAA|FedRAMP|500\+|2\.4M\+|98%|a16z|Sequoia|GV|Bessemer' README.md ROADMAP.md backlog/ docs/ .github/; then
+            echo "Forbidden fabricated claim found — reject"
+            exit 1
+          fi
+          echo "No fabricated claims detected"
