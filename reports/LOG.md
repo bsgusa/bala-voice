@@ -29,3 +29,15 @@ This repo still referenced the old slug.
 - README / docs references updated to the new slugs. Local checkout paths unchanged
   (`~/AI-Job-Automation`, `~/company-lexoraai` — the directories were not renamed).
 - Historical entries above are left as-is.
+
+## 2026-11-01 — CI fixed: claims grep matched its own workflow
+
+CI had been red since the scaffold (2026-10-23). The "forbidden fabricated
+claims" step grepped `.github/`, which includes `.github/workflows/ci.yml`
+itself — the file that contains the forbidden-phrase pattern — so every push
+failed regardless of content.
+
+- `.github/workflows/ci.yml`: claims grep now uses `--exclude-dir=workflows`.
+  Templates under `.github/` are still checked; the pattern list stays in the
+  workflow.
+- Verified: all CI steps pass locally; CI green on `main` (3233ff4).
