@@ -60,11 +60,18 @@
       "role": "Media studio — studio issues routed here"
     },
     {
-      "repo": "bsgusa/AI-Job-Automation",
+      "repo": "bsgusa/company-lexora-legal",
       "localPath": "~/AI-Job-Automation",
       "branch": "main",
       "entity": "lexora-ai-llc",
-      "role": "Lexora product — product issues routed here"
+      "role": "Lexora legal — product issues routed here"
+    },
+    {
+      "repo": "bsgusa/company-lexora-jobs",
+      "localPath": "~/company-lexoraai",
+      "branch": "main",
+      "entity": "lexora-ai-llc",
+      "role": "Lexora jobs — product issues routed here"
     }
   ]
 }
