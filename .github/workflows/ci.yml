@@ -25,7 +25,7 @@ jobs:
 
       - name: Check for forbidden fabricated claims
         run: |
-          if grep -riE 'SOC 2|ISO 27001|HIPAA|FedRAMP|500\+|2\.4M\+|98%|a16z|Sequoia|GV|Bessemer' README.md ROADMAP.md backlog/ docs/ .github/; then
+          if grep -riE --exclude-dir=workflows 'SOC 2|ISO 27001|HIPAA|FedRAMP|500\+|2\.4M\+|98%|a16z|Sequoia|GV|Bessemer' README.md ROADMAP.md backlog/ docs/ .github/; then
             echo "Forbidden fabricated claim found — reject"
             exit 1
           fi
